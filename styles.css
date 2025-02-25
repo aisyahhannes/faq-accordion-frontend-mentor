@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --light_pink: #f9f0ff;
+    --grayish_purple: #8c6991;
+    --dark_purple: #2f1533;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--light_pink);
+    font-family: 'Work Sans';
+    color: var(--dark_purple);
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    width: 600px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+
+article {
+    width: 600px;
+    margin: 20px 0;
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.plus {
+    background-image: url(assets/images/icon-plus.svg);
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title img {
+    width: 35px;
+    height: 35px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+h2:hover {
+    color: var(--grayish_purple);
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.minus {
+    background-image: url(assets/images/icon-minus.svg);
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .background {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+
+    main {
+        width: 300px;
+        padding: 20px;
+    }
+
+    article {
+        width: 300px;
+    }
+
+    .plus {
+        width: 25px;
+        height: 25px;
+    }
+
+    h2 {
+        width: 255px;
+    }
+}
